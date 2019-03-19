@@ -3,7 +3,7 @@ import Foundation
 import PromiseKit
 
 @available(macOS 10.13, *)
-func imageset(source: String, outputURL: URL, size: Size) -> Promise<Void> {
+public func imageset(source: String, outputURL: URL, size: Size) -> Promise<Void> {
     let fs = FileManager.default
     let worker = Rasterizer()
 

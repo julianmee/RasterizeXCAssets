@@ -3,7 +3,7 @@ import Foundation
 import PromiseKit
 
 @available(macOS 10.13, *)
-func appiconset(source: String, outputURL: URL) -> Promise<Void> {
+public func appiconset(source: String, outputURL: URL) -> Promise<Void> {
     let fs = FileManager.default
     let worker = Rasterizer()
 
