@@ -55,8 +55,8 @@ func main(source: String, output: String, size: Size) throws -> Promise<Void> {
     let sourceString = String(data: try Data(contentsOf: sourceURL), encoding: .utf8)!
 
     switch outputURL.pathExtension {
-        case "appiconset": return appiconset(source: sourceString, outputURL: outputURL)
-        case "imageset": return imageset(source: sourceString, outputURL: outputURL, size: size)
+        case "appiconset": return AppIconSet.build(source: sourceString, outputURL: outputURL)
+        case "imageset": return ImageSet.build(source: sourceString, outputURL: outputURL, size: size)
         default: throw UserError.unexpectedContainerType(xcassetsURL.pathExtension)
     }
 }

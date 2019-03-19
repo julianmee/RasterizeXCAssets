@@ -1,6 +1,6 @@
 import Commander
 
-open struct Size {
+public struct Size {
     let width: UInt
     let height: UInt
 
@@ -28,7 +28,7 @@ open struct Size {
 }
 
 extension Size: CustomStringConvertible {
-    var description: String { return "\(self.width)x\(self.height)" }
+    public var description: String { return "\(self.width)x\(self.height)" }
 }
 
 extension Size: ArgumentConvertible {
