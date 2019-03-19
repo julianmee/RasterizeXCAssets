@@ -4,7 +4,7 @@ import PromiseKit
 
 @available(macOS 10.13, *)
 public class ImageSet {
-    class public func build(source: String, outputURL: URL, size: Size) -> Promise<Void> {
+    public class func build(source: String, outputURL: URL, size: Size) -> Promise<Void> {
         let fs = FileManager.default
         let worker = Rasterizer()
 
