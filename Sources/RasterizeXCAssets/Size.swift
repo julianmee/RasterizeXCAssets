@@ -27,11 +27,11 @@ open struct Size {
     }
 }
 
-open extension Size: CustomStringConvertible {
+extension Size: CustomStringConvertible {
     var description: String { return "\(self.width)x\(self.height)" }
 }
 
-open extension Size: ArgumentConvertible {
+extension Size: ArgumentConvertible {
     public init(parser: ArgumentParser) throws {
         if let value = parser.shift() {
             try self.init(string: value)
