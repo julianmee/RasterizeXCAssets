@@ -4,9 +4,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "RasterizeXCAssets",
+    name: "rasterizeassets",
     products: [
-        .library(name: "rasterizexcassets", targets: ["RasterizeXCAssets"]),
+        .library(name: "RasterizeAssets", targets: ["RasterizeXCAssets"]),
     ],
     dependencies: [
         .package(url: "https://github.com/kylef/Commander", from: "0.8.0"),
