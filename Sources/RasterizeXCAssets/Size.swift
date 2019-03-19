@@ -1,6 +1,6 @@
 import Commander
 
-struct Size {
+open struct Size {
     let width: UInt
     let height: UInt
 
@@ -27,11 +27,11 @@ struct Size {
     }
 }
 
-extension Size: CustomStringConvertible {
+open extension Size: CustomStringConvertible {
     var description: String { return "\(self.width)x\(self.height)" }
 }
 
-extension Size: ArgumentConvertible {
+open extension Size: ArgumentConvertible {
     public init(parser: ArgumentParser) throws {
         if let value = parser.shift() {
             try self.init(string: value)
