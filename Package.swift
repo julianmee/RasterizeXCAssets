@@ -13,7 +13,6 @@ pkg.dependencies = [
 let pmk: Target = .target(name: "RasterizeXCAssets", dependencies: ["Commander", "JSBridge"])
 pmk.path = "Sources"
 
-
 pkg.targets = [
     pmk
 ]
