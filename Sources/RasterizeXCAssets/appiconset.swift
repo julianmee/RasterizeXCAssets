@@ -4,7 +4,7 @@ import PromiseKit
 
 @available(macOS 10.13, *)
 open class AppIconSet {
-    open class func build(source: String, outputURL: URL) -> Promise<Void> {
+    public static func build(source: String, outputURL: URL) -> Promise<Void> {
         let fs = FileManager.default
         let worker = Rasterizer()
 
